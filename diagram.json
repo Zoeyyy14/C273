@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "author": "Zoey Ma",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0.6, "left": 47.4, "attrs": {} },
+    { "type": "wokwi-microsd-card", "id": "sd1", "top": 0.23, "left": -47.93, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 111.8,
+      "left": -38.4,
+      "attrs": { "color": "black" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 179,
+      "left": -38.4,
+      "attrs": { "color": "blue" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -53.2, "left": 79.9, "attrs": {} }
+  ],
+  "connections": [
+    [ "sd1:DO", "uno:12", "green", [ "h0" ] ],
+    [ "sd1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "sd1:SCK", "uno:13", "green", [ "h0" ] ],
+    [ "sd1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "sd1:DI", "uno:11", "green", [ "h0" ] ],
+    [ "sd1:CS", "uno:10", "green", [ "h0" ] ],
+    [ "btn1:1.l", "uno:2", "green", [ "h0" ] ],
+    [ "btn1:2.r", "uno:GND.1", "green", [ "h0" ] ],
+    [ "btn2:1.l", "uno:3", "green", [ "h0" ] ],
+    [ "btn2:2.r", "uno:GND.1", "green", [ "h0" ] ],
+    [ "sw1:1", "uno:4", "green", [ "v0" ] ],
+    [ "sw1:2", "uno:GND.1", "green", [ "v0" ] ],
+    [ "sw1:3", "uno:5", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
